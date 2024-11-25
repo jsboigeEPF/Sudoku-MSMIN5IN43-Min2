@@ -11,7 +11,7 @@ namespace Sudoku.Solvers
         public SudokuGrid Solve(SudokuGrid sudokuGrid)
         {
             string pythonPath = @"C:\Users\elea1\AppData\Local\Programs\Python\Python313\Python.exe"; // Chemin vers l'exécutable Python
-            string scriptPath = @".\PythonChocoSolver.py"; // Chemin vers le script Python
+            string scriptPath = @"Sudoku.chocosolver\PythonChocoSolver.py"; // Chemin vers le script Python
 
             // Convertir la grille en JSON
             var inputGrid = new { sudoku = sudokuGrid.Cells };
