@@ -10,7 +10,7 @@ namespace Sudoku.Solvers
     {
         public SudokuGrid Solve(SudokuGrid sudokuGrid)
         {
-            string pythonPath = @"C:\Users\elea1\AppData\Local\Programs\Python\Python313\Python.exe"; // Chemin vers l'exécutable Python
+            string pythonPath = "python";
             string scriptPath = @"..\..\..\..\Sudoku.chocosolver\PythonChocoSolver.py";
 
            
