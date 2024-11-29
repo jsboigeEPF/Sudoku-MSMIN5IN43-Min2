@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoku.chocosolver", "Sudok
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoku.chocosolver_Heuristic", "Sudoku.chocosolver_Heuristic\Sudoku.chocosolver_Heuristic.csproj", "{0EE88E4B-C170-4262-8218-39E21B36A2A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoku.chocosolver_Python", "Sudoku.chocosolver_Python\Sudoku.chocosolver_Python.csproj", "{78ABAF87-CEAB-45F3-AB2A-D3E40F525AE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{0EE88E4B-C170-4262-8218-39E21B36A2A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EE88E4B-C170-4262-8218-39E21B36A2A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EE88E4B-C170-4262-8218-39E21B36A2A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78ABAF87-CEAB-45F3-AB2A-D3E40F525AE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78ABAF87-CEAB-45F3-AB2A-D3E40F525AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78ABAF87-CEAB-45F3-AB2A-D3E40F525AE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78ABAF87-CEAB-45F3-AB2A-D3E40F525AE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

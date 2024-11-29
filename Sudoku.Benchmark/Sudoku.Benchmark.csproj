@@ -16,6 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sudoku.chocosolver_Heuristic\Sudoku.chocosolver_Heuristic.csproj" />
+    <ProjectReference Include="..\Sudoku.chocosolver_Python\Sudoku.chocosolver_Python.csproj" />
     <ProjectReference Include="..\Sudoku.Shared\Sudoku.Shared.csproj" />
     <ProjectReference Include="..\Sudoku.Backtracking\Sudoku.Backtracking.csproj" />
     <ProjectReference Include="..\Sudoku.Shared\Sudoku.Shared.csproj" />
