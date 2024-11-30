@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<OutputType>Library</OutputType>
+		<LangVersion>latest</LangVersion>
+		<RootNamespace>Kermalis.SudokuSolver</RootNamespace>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Sudoku.Benchmark\Sudoku.Benchmark.csproj" />
+	  <ProjectReference Include="..\..\Sudoku.Shared\Sudoku.Shared.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -103,6 +103,7 @@ namespace Sudoku.Shared
         /// Displays a SudokuGrid in an easy-to-read format
         /// </summary>
         /// <returns></returns>
+
         public override string ToString()
         {
             var lineSep = new string('-', 31);
@@ -194,6 +195,7 @@ namespace Sudoku.Shared
         /// </summary>
         /// <param name="sudokuAsString">the string representing the sudoku</param>
         /// <returns>the parsed sudoku</returns>
+
         public static SudokuGrid ReadSudoku(string sudokuAsString)
         {
             return ReadMultiSudoku(new[] { sudokuAsString })[0];
@@ -205,6 +207,7 @@ namespace Sudoku.Shared
         /// </summary>
         /// <param name="fileName"></param>
         /// <returns>the list of parsed Sudokus</returns>
+
         public static List<SudokuGrid> ReadSudokuFile(string fileName)
         {
             return ReadMultiSudoku(File.ReadAllLines(fileName));
@@ -215,6 +218,7 @@ namespace Sudoku.Shared
         /// </summary>
         /// <param name="lines">the lines of string to parse</param>
         /// <returns>the list of parsed Sudokus</returns>
+
         public static List<SudokuGrid> ReadMultiSudoku(string[] lines)
         {
             var toReturn = new List<SudokuGrid>();
@@ -271,6 +275,7 @@ namespace Sudoku.Shared
         /// </summary>
         /// <param name="c">a character to test</param>
         /// <returns>true if the character is a cell's char</returns>
+        
         private static bool IsSudokuChar(char c)
         {
             return char.IsDigit(c) || c == '.' || c == 'X' || c == '-';
