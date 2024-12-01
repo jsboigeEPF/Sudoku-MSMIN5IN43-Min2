@@ -53,6 +53,22 @@ namespace Sudoku.Shared
             return toreturn;
         }
 
+        public int[] GetColumn(int columnIndex)
+{
+    if (columnIndex < 0 || columnIndex >= 9)
+    {
+        throw new ArgumentOutOfRangeException("columnIndex", "Index must be between 0 and 8.");
+    }
+
+    int[] column = new int[9];
+    for (int i = 0; i < 9; i++)
+    {
+        column[i] = Cells[i, columnIndex];
+    }
+
+    return column;
+}
+
         public static readonly (int row, int column)[][][] CellNeighbours;
 
 
