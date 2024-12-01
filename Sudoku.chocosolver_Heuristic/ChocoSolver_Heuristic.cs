@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using Newtonsoft.Json; 
+using Newtonsoft.Json;
 using Sudoku.Shared;
 
 namespace Sudoku.Solvers
 {
-    public class ChocoSolver : ISudokuSolver
+    public class ChocoSolverHeuristic : ISudokuSolver
     {
         public SudokuGrid Solve(SudokuGrid sudokuGrid)
         {
             string pythonPath = "python";
-            string scriptPath = @"..\..\..\..\Sudoku.chocosolver\PythonChocoSolver.py";
+            string scriptPath = @"..\..\..\..\Sudoku.chocosolver_Heuristic\PythonChocoSolver_Heuristic.py";
 
-           
             var inputGrid = new { sudoku = sudokuGrid.Cells };
             string inputJson = JsonConvert.SerializeObject(inputGrid);
 
