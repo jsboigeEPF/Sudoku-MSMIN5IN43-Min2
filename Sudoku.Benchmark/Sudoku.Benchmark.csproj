@@ -21,6 +21,7 @@
     <ProjectReference Include="..\Sudoku.AlgorithmX\Sudoku.AlgorithmX.csproj" />
     <ProjectReference Include="..\Sudoku.Shared\Sudoku.Shared.csproj" />
     <ProjectReference Include="..\Sudoku.chocosolver\Sudoku.chocosolver.csproj" />
+    <ProjectReference Include="..\Sudoku.CSPSolver\Sudoku.CSPSolver.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="appsettings.json">
