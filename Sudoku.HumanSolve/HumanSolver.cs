@@ -30,6 +30,9 @@ namespace Sudoku.HumanSolving
                 Solver_HiddenSingle.Apply,
                 //Solver_HiddenRectangle.Apply,
                 //Solver_NakedTuple.Apply,
+                //Solver_XYChain.Apply,
+                //Solver_YWing.Apply,
+                Solver_LockedCandidates.Apply,
             };
         }
 
@@ -46,7 +49,7 @@ namespace Sudoku.HumanSolving
                 }
             }
 
-            return solved ? s : null;
+            return s;
         }
     }
 }
