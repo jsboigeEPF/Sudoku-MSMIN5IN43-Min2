@@ -4,6 +4,13 @@ import math
 from random import choice
 import statistics 
 
+
+def solveSudokuWrapper(input_sudoku):
+    sudoku = np.array(input_sudoku)
+    solution = solveSudoku(sudoku)
+    return solution.tolist()  # Convert to Python list for .NET compatibility
+
+
 startingSudoku = """
                     024007000
                     600000000
