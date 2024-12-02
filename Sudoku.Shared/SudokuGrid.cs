@@ -204,6 +204,27 @@ namespace Sudoku.Shared
             return res.ToArray();
         }
 
+        public void RemoveCandidate(int row, int column, int candidate)
+        {
+            if (Cells[row, column] != 0)
+            {
+                return;
+            }
+
+            var availableNumbers = GetAvailableNumbers(row, column);
+
+            if (availableNumbers.Contains(candidate))
+            {
+                // Simule la suppression du candidat en recalculant les candidats
+                Cells[row, column] = -1; // Marque temporairement la cellule
+                var updatedCandidates = GetAvailableNumbers(row, column)
+                    .Where(n => n != candidate)
+                    .ToArray();
+
+                Cells[row, column] = 0; // Restaure la cellule
+            }
+        }
+
 
 
         /// <summary>

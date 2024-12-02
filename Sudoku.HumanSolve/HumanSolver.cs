@@ -28,7 +28,8 @@ namespace Sudoku.HumanSolving
             return new Func<SudokuGrid, bool>[]
             {
                 Solver_HiddenSingle.Apply,
-                Solver_HiddenRectangle.Apply,
+                //Solver_HiddenRectangle.Apply,
+                //Solver_NakedTuple.Apply,
             };
         }
 
