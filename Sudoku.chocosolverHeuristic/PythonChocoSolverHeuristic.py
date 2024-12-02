@@ -1,5 +1,4 @@
 import pychoco
-import numpy as np
 
 def solve_sudoku_heuristic(sudoku_grid):
     model = pychoco.Model()
