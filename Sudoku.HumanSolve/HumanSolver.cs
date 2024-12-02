@@ -33,6 +33,7 @@ namespace Sudoku.HumanSolving
                 //Solver_XYChain.Apply,
                 //Solver_YWing.Apply,
                 Solver_LockedCandidates.Apply,
+                Solver_AvoidableRectangle.Apply,
             };
         }
 
