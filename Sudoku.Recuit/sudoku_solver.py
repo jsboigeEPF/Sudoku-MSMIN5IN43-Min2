@@ -4,19 +4,15 @@ import math
 from random import choice
 import statistics 
 
-startingSudoku = """
-                    024007000
-                    600000000
-                    003680415
-                    431005000
-                    500000032
-                    790000060
-                    209710800
-                    040093000
-                    310004750
-                """
 
-sudoku = np.array([[int(i) for i in line] for line in startingSudoku.split()])
+def solveSudokuWrapper(input_sudoku):
+    sudoku = np.array(input_sudoku, dtype=np.int32)  # Ensure dtype is int32
+    solution = solveSudoku(sudoku)
+    return solution  # Convert to list for easier handling in C#
+ 
+
+
+sudoku = sudoku_grid
 
 def PrintSudoku(sudoku):
     print("\n")
@@ -178,6 +174,5 @@ def solveSudoku (sudoku):
     f.close()
     return(tmpSudoku)
 
-solution = solveSudoku(sudoku)
-print(CalculateNumberOfErrors(solution))
+solution = solveSudokuWrapper(sudoku)
 PrintSudoku(solution)
