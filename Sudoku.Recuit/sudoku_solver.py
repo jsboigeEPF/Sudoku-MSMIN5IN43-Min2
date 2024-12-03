@@ -6,9 +6,10 @@ import statistics
 
 
 def solveSudokuWrapper(input_sudoku):
-    sudoku = np.array(input_sudoku)
+    sudoku = np.array(input_sudoku, dtype=np.int32)  # Ensure dtype is int32
     solution = solveSudoku(sudoku)
-    return solution.tolist()  # Convert to Python list for .NET compatibility
+    return solution  # Convert to list for easier handling in C#
+ 
 
 
 startingSudoku = """
@@ -185,6 +186,6 @@ def solveSudoku (sudoku):
     f.close()
     return(tmpSudoku)
 
-solution = solveSudoku(sudoku)
+solution = solveSudokuWrapper(sudoku)
 print(CalculateNumberOfErrors(solution))
 PrintSudoku(solution)
