@@ -18,8 +18,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sudoku.Backtracking", "Sudo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoku.chocosolver", "Sudoku.chocosolver\Sudoku.chocosolver.csproj", "{BD9CCB39-8519-45B4-90F9-EF03BE4A2753}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sudoku.DlxSolver", "Sudoku.DlxSolver\Sudoku.DlxSolver.csproj", "{B23A2841-F875-461C-8E19-98B111985265}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoku.AlgorithmX", "Sudoku.AlgorithmX\Sudoku.AlgorithmX.csproj", "{272E0E25-EBE6-4198-B502-4C0D3CEB9F1E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoku.HumanSolve", "Sudoku.HumanSolve\Sudoku.HumanSolve.csproj", "{0EE0BD92-B4DB-41C4-8E98-25A5A3B3FBA7}"
@@ -50,10 +48,6 @@ Global
 		{BD9CCB39-8519-45B4-90F9-EF03BE4A2753}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD9CCB39-8519-45B4-90F9-EF03BE4A2753}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD9CCB39-8519-45B4-90F9-EF03BE4A2753}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B23A2841-F875-461C-8E19-98B111985265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B23A2841-F875-461C-8E19-98B111985265}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B23A2841-F875-461C-8E19-98B111985265}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B23A2841-F875-461C-8E19-98B111985265}.Release|Any CPU.Build.0 = Release|Any CPU
 		{272E0E25-EBE6-4198-B502-4C0D3CEB9F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{272E0E25-EBE6-4198-B502-4C0D3CEB9F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{272E0E25-EBE6-4198-B502-4C0D3CEB9F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
