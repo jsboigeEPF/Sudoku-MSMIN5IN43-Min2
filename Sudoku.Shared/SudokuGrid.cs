@@ -53,6 +53,22 @@ namespace Sudoku.Shared
             return toreturn;
         }
 
+        public int[] GetColumn(int columnIndex)
+{
+    if (columnIndex < 0 || columnIndex >= 9)
+    {
+        throw new ArgumentOutOfRangeException("columnIndex", "Index must be between 0 and 8.");
+    }
+
+    int[] column = new int[9];
+    for (int i = 0; i < 9; i++)
+    {
+        column[i] = Cells[i, columnIndex];
+    }
+
+    return column;
+}
+
         public static readonly (int row, int column)[][][] CellNeighbours;
 
 
@@ -103,6 +119,7 @@ namespace Sudoku.Shared
         /// Displays a SudokuGrid in an easy-to-read format
         /// </summary>
         /// <returns></returns>
+
         public override string ToString()
         {
             var lineSep = new string('-', 31);
@@ -187,6 +204,27 @@ namespace Sudoku.Shared
             return res.ToArray();
         }
 
+        public void RemoveCandidate(int row, int column, int candidate)
+        {
+            if (Cells[row, column] != 0)
+            {
+                return;
+            }
+
+            var availableNumbers = GetAvailableNumbers(row, column);
+
+            if (availableNumbers.Contains(candidate))
+            {
+                // Simule la suppression du candidat en recalculant les candidats
+                Cells[row, column] = -1; // Marque temporairement la cellule
+                var updatedCandidates = GetAvailableNumbers(row, column)
+                    .Where(n => n != candidate)
+                    .ToArray();
+
+                Cells[row, column] = 0; // Restaure la cellule
+            }
+        }
+
 
 
         /// <summary>
@@ -194,6 +232,7 @@ namespace Sudoku.Shared
         /// </summary>
         /// <param name="sudokuAsString">the string representing the sudoku</param>
         /// <returns>the parsed sudoku</returns>
+
         public static SudokuGrid ReadSudoku(string sudokuAsString)
         {
             return ReadMultiSudoku(new[] { sudokuAsString })[0];
@@ -205,6 +244,7 @@ namespace Sudoku.Shared
         /// </summary>
         /// <param name="fileName"></param>
         /// <returns>the list of parsed Sudokus</returns>
+
         public static List<SudokuGrid> ReadSudokuFile(string fileName)
         {
             return ReadMultiSudoku(File.ReadAllLines(fileName));
@@ -215,6 +255,7 @@ namespace Sudoku.Shared
         /// </summary>
         /// <param name="lines">the lines of string to parse</param>
         /// <returns>the list of parsed Sudokus</returns>
+
         public static List<SudokuGrid> ReadMultiSudoku(string[] lines)
         {
             var toReturn = new List<SudokuGrid>();
@@ -271,6 +312,7 @@ namespace Sudoku.Shared
         /// </summary>
         /// <param name="c">a character to test</param>
         /// <returns>true if the character is a cell's char</returns>
+        
         private static bool IsSudokuChar(char c)
         {
             return char.IsDigit(c) || c == '.' || c == 'X' || c == '-';
